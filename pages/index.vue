@@ -2,19 +2,16 @@
   <section class="row">
     <div>
 
-
+        ESTE ES EL CONTENIDO
+        
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
-  layout: 'global',
-  components: {
-    Logo
-  }
+  layout: 'global'
 }
 </script>
 

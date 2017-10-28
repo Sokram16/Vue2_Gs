@@ -1,22 +1,78 @@
 <template>
-    <div class="row wrapper">
-        
-        <sidebar/>
-        <nuxt/>
-
+    <div class="app">
+    <AppHeader/>
+    <div class="app-body">
+      <Sidebar :navItems="itemsSideBar"/>
+      <main class="main">
+        <breadcrumb :list="list"/>
+        <div class="container-fluid">
+           <nuxt/>
+        </div>
+      </main>
+      <AppAside/>
     </div>
+    <AppFooter/>
+  </div>
 </template>
 
 <script>
-import Sidebar from '~/components/Sidebar/Sidebar_index.vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+import "~/css/Font-Awesome/css/font-awesome.min.css";
+
+import AppHeader from "~/components/Core-Ui/components/Header";
+import Sidebar from "~/components/Core-Ui/components/Sidebar";
+import AppAside from "~/components/Core-Ui/components/Aside";
+import AppFooter from "~/components/Core-Ui/components/Footer";
+import Breadcrumb from "~/components/Core-Ui/components/Breadcrumb";
 
 export default {
+  name: "global",
   components: {
-    Sidebar
+    Sidebar,
+    AppHeader,
+    AppAside,
+    AppFooter,
+    Breadcrumb
+  },
+  data() {
+    return {
+      itemsSideBar: [
+        {
+          classes: "bg-primary",
+          name: "Inventario",
+          icon: "fa fa-pencil",
+          children: [
+            {
+              name: "Items",
+              url: "/items",
+              icon: "fa ",
+              children: false
+            },
+            {
+              name: "Bodegas",
+              url: "/bodegas",
+              icon: "fa ",
+              children: false
+            },
+            {
+              name: "Herramientas",
+              url: "/herramientas",
+              icon: "fa ",
+              children: false
+            }
+          ]
+        },
+        {
+          classes: "bg-primary",
+          name: "Parametros",
+          icon: "fa fa-pencil",
+          url: "/parametros"
+        }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style>

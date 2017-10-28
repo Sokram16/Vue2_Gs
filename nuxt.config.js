@@ -1,3 +1,4 @@
+
 module.exports = {
   /*
   ** Headers of the page
@@ -13,6 +14,13 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  modules: [
+    '@nuxtjs/bootstrap-vue'
+  ],
+  css: [
+    // SCSS file in the project
+    '@/css/Core-Ui/style.scss'
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -28,9 +36,9 @@ module.exports = {
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
-          test: /\.(js|vue)$/,
+          test: /\.(js)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/,
+          exclude: /(node_modules)/
         })
       }
     }
