@@ -1,7 +1,8 @@
 <template>
   <div class="">
     
-    <nuxt/>
+    <!-- <nuxt/> -->
+    <nuxt-child/>
     
   </div>
 </template>

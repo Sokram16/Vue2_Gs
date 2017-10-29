@@ -1,7 +1,8 @@
 <template>
-    <div class="card">
+  
+          <div class="card">
   <div class="card-header">
-    Inicio - General Store Aplicación
+    Items en el inventario
   </div>
   <div class="card-block">
      
@@ -11,10 +12,10 @@
 </template>
 
 <script>
-
 export default {
-  layout: 'global'
-}
+  name: "inventario-items",
+  layout: "global"
+};
 </script>
 
 <style>

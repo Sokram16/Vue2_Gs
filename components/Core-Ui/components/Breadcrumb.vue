@@ -1,8 +1,11 @@
 <template>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item" v-for="(item, index) in list">
+    <li class="breadcrumb-item" v-for="(item, index) in list" v-bind:key="'bread'+index">
       <span class="active" v-if="isLast(index)">{{ showName(item) }}</span>
-      <router-link :to="item" v-else>{{ showName(item) }}</router-link>
+      <!-- <router-link :to="item" v-else>{{ showName(item) }}</router-link> -->
+      <nuxt-link :to="item" :class="classList" v-else>
+        {{ showName(item) }}
+      </nuxt-link>
     </li>
   </ol>
 </template>

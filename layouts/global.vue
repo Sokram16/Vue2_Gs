@@ -4,9 +4,8 @@
     <div class="app-body">
       <Sidebar :navItems="itemsSideBar"/>
       <main class="main">
-        <breadcrumb :list="list"/>
         <div class="container-fluid">
-           <nuxt/>
+            <nuxt/>         
         </div>
       </main>
       <AppAside/>
@@ -45,7 +44,7 @@ export default {
           children: [
             {
               name: "Items",
-              url: "/items",
+              url: "/inventario/items",
               icon: "fa ",
               children: false
             },
@@ -66,7 +65,7 @@ export default {
         {
           classes: "bg-primary",
           name: "Parametros",
-          icon: "fa fa-pencil",
+          icon: "fa fa-cogs",
           url: "/parametros"
         }
       ]
@@ -76,5 +75,7 @@ export default {
 </script>
 
 <style>
-
+.nuxt-link-exact-active.nuxt-link-active {
+  background-color: #20a8d8 !important;
+}
 </style>
