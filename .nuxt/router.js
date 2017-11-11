@@ -5,6 +5,7 @@ Vue.use(Router)
 
 const _7419527b = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages\\index" */).then(m => m.default || m)
 const _7e46a958 = () => import('..\\pages\\inventario\\items.vue' /* webpackChunkName: "pages\\inventario\\items" */).then(m => m.default || m)
+const _3835e6a3 = () => import('..\\pages\\inventario\\bodegas.vue' /* webpackChunkName: "pages\\inventario\\bodegas" */).then(m => m.default || m)
 
 
 
@@ -49,6 +50,11 @@ export function createRouter () {
 			path: "/inventario/items",
 			component: _7e46a958,
 			name: "inventario-items"
+		},
+		{
+			path: "/inventario/bodegas",
+			component: _3835e6a3,
+			name: "inventario-bodegas"
 		}
     ],
     fallback: false

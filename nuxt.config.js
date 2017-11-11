@@ -15,7 +15,8 @@ module.exports = {
     ]
   },
   modules: [
-    '@nuxtjs/bootstrap-vue'
+    '@nuxtjs/bootstrap-vue',
+    'vue2-datatable'
   ],
   css: [
     // SCSS file in the project
@@ -28,7 +29,8 @@ module.exports = {
   generate: {
     routes: [
       '/',
-      '/inventario/items'
+      '/inventario/items',
+      '/inventario/bodegas'
     ]
   },
   /*

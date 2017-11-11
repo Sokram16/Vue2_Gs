@@ -50,7 +50,7 @@ export default {
             },
             {
               name: "Bodegas",
-              url: "/bodegas",
+              url: "/inventario/bodegas",
               icon: "fa ",
               children: false
             },
